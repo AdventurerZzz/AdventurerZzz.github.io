@@ -9,15 +9,15 @@ nav:
 
 # Menu 目錄
 menu:
-  Home: / || fas fa-home
-  Archives: /archives/ || fas fa-archive
-  Tags: /tags/ || fas fa-tags
-  Categories: /categories/ || fas fa-folder-open
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
   # List||fas fa-list:
   #   Music: /music/ || fas fa-music
   #   Movie: /movies/ || fas fa-video
-  Link: /link/ || fas fa-link
-  About: /关于/ || fas fa-heart
+  友链: /link/ || fas fa-link
+  关于我: /关于/ || fas fa-heart
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -44,7 +44,7 @@ social:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: /img/logo.png
+favicon: data:image/png;base64,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
 
 # Avatar (頭像)
 avatar:
@@ -89,9 +89,10 @@ cover:
   # the position of cover in home page (封面顯示的位置)
   # left/right/both
   position: both
+  suffix: 1
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
   default_cover:
-    - https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
+    - https://imgapi.xl0408.top/index.php
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
@@ -224,7 +225,7 @@ aside:
   hide: false
   button: true
   mobile: true # display on mobile
-  position: right # left or right
+  position: left # left or right
   display:
     archive: true
     tag: true
@@ -239,7 +240,8 @@ aside:
       link: https://github.com/AdventurerZzz
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: Welcome! 欢迎来到我的博客
+
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
@@ -647,10 +649,10 @@ text_align_justify: false
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background:
+background: "url(../img/bg.jpg)"
 
 # Footer Background
-footer_bg: false
+footer_bg: true
 
 # Add mask to header or footer (为 header 或 footer 添加黑色半透遮罩)
 mask:
@@ -692,8 +694,8 @@ canvas_fluttering_ribbon:
 # canvas_nest
 # https://github.com/hustcc/canvas-nest.js
 canvas_nest:
-  enable: false
-  color: "0,0,255" #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
+  enable: true
+  color: "255,255,255" #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
   opacity: 0.7 # the opacity of line (0~1), default: 0.5.
   zIndex: -1 # z-index property of the background, default: -1.
   count: 99 # the number of lines, default: 99.
@@ -701,7 +703,7 @@ canvas_nest:
 
 # Mouse click effects: fireworks (鼠標點擊效果: 煙火特效)
 fireworks:
-  enable: false
+  enable: true
   zIndex: 9999 # -1 or 9999
   mobile: false
 
@@ -754,21 +756,28 @@ hr_icon:
 
 # the subtitle on homepage (主頁subtitle)
 subtitle:
-  enable: false
-  # Typewriter Effect (打字效果)
+  enable: true
+  # Typewriter Effect (打字效果);如果关闭打字效果，subtitle 只会显示 sub 的第一行文字
   effect: true
-  # Customize typed.js (配置typed.js)
-  # https://github.com/mattboldt/typed.js/#customization
-  typed_option:
-  # source 調用第三方服務
-  # source: false 關閉調用
-  # source: 1  調用一言網的一句話（簡體） https://hitokoto.cn/
-  # source: 2  調用一句網（簡體） https://yijuzhan.com/
-  # source: 3  調用今日詩詞（簡體） https://www.jinrishici.com/
-  # subtitle 會先顯示 source , 再顯示 sub 的內容
-  source: false
-  # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
+  # startDelay: 300 # time before typing starts in milliseconds
+  # typeSpeed: 150 # type speed in milliseconds
+  # backSpeed: 50 # backspacing speed in milliseconds
+  # loop (循环打字)
+  loop: false
+  # source 调用第三方服务
+  # source: false 关闭调用
+  # source: 1 调用一言网的一句话（简体） https://hitokoto.cn/
+  # source: 2  调用一句网（简体） http://yijuzhan.com/
+  # source: 3  调用今日诗词（简体） https://www.jinrishici.com/
+  # subtitle 会先显示 source , 再显示 sub 的内容
   sub:
+    - 所谓觉悟，乃是在漆黑的荒原中，开辟出一条属于自己的星光大道！
+    - 为了理想的实现，航行的孤独在所难免。
+    - Never put off till tomorrow what you can do today!
+    - 越想贴近事实，不明白的事情就越多。
+    - 因为不可能，所以才值得相信。
+    - I want to be with you this year and next year!
+    - 两岸桃花烘日出，四围高柳到天垂。
 
 # Loading Animation (加載動畫)
 preloader:
@@ -922,8 +931,12 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
+    - <link rel="stylesheet" href="/css/mouse.css">
+    # - <link rel="stylesheet" href="/css/footer.css">
   bottom:
     # - <script src="xxxx"></script>
+    - <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    - <script src="https://gcore.jsdelivr.net/gh/xiabo2/CDN@latest/fishes.js"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work

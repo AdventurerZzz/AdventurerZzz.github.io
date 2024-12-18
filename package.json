@@ -30,6 +30,6 @@
     "hexo-util": "^3.3.0",
     "install": "^0.13.0",
     "live2d-widget-model-tororo": "^1.0.5",
-    "npm": "^10.8.3"
+    "npm": "^11.0.0"
   }
 }

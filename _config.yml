@@ -90,10 +90,10 @@ live2d:
     use: live2d-widget-model-tororo ## 模型文件
   display:
     position: left # 定位方向 left right top bottom
-    width: 150 # 小人宽度
-    height: 300 #  小人高度
+    width: 300 # 小人宽度
+    height: 600 #  小人高度
     hOffset: 0 # 向 偏移
-    vOffset: -15 # 像 偏移
+    vOffset: -30 # 像 偏移
   mobile:
     show: true # 手机端是否显示
   react:

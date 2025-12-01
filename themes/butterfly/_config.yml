@@ -240,7 +240,7 @@ aside:
       link: https://github.com/AdventurerZzz
   card_announcement:
     enable: true
-    content: Welcome! 欢迎来到我的博客
+    content: 欢迎访问我的博客！<br><img src="/img/gg-cat.gif" width="100%" height="200"/>
 
   card_recent_post:
     enable: true

@@ -23,8 +23,9 @@ This model provider doesn't serve your region.下面提供一些方法来解决�
 
 1. 在 cursor 的设置页面中找到 Network
 2. 找到 HTTP Compatibility Mode ,然后选择 HTTP1.1
-   ![cursor设置](/img/cursorsetting.png "cursor设置")
 3. 打开魔法工具，打开 TUN 模式
+
+![cursor设置](/img/cursorSetting.png "cursor设置")
 
 ## End
 

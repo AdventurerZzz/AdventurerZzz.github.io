@@ -18,6 +18,7 @@ More info: [Writing](https://hexo.io/docs/writing.html)
 
 ```bash
 $ hexo server
+Java环境搭建与mcp连接数据库
 ```
 
 <!-- <img src="https://ghchart.rshah.org/409ba5/AdventurerZzz" alt="Barry-Flynn's Blue Github Chart" /> -->

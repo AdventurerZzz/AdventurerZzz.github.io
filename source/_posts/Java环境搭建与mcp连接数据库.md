@@ -57,6 +57,48 @@ tags:
 3. 打开命令行，在地址栏输入 `cmd` ，打开命令行，输入 `mvn -v` ，如果出现 `mvn` 命令，则说明安装成功
    ![命令行](/img/mvn_version.png "命令行")
 
+4. 在 D:\java\apache-maven-3.9.12 下找到 conf 文件夹，打开，找到 settings.xml 文件：
+   ![settings.xml](/img/mvnsetting.png "settings.xml")
+   找到 localRepository 标签，在注释外添加：
+
+   ```xml
+   <localRepository>D:\java\apache-maven-3.9.12\repository</localRepository>
+   ![settings.xml](/img/mvnlocal.png "settings.xml")
+   ```
+
+5. 配置国内镜像：
+   ![settings.xml](/img/mvnjx.png "settings.xml")
+   找到 mirrors 标签，在注释外添加：
+
+   ```xml
+   <!-- 阿里云仓库 -->
+   <mirror>
+   <id>alimaven</id>
+   <mirrorOf>central</mirrorOf>
+   <name>aliyun maven</name>
+   <url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
+   </mirror>
+   ```
+
+6. 配置 JDK 版本:
+   ![settings.xml](/img/mvnjdk.png "settings.xml")
+   找到 profiles 标签，在注释外添加：
+
+   ```xml
+   <profile>
+   <id>jdk-17</id>
+   <activation>
+   <jdk>17</jdk>
+   </activation>
+   <properties>
+   <maven.compiler.release>17</maven.compiler.release>
+   </properties>
+   </profile>
+   ```
+
+7. 配置完成后，保存文件，关闭命令行，重新打开命令行，输入 `mvn help:system` ，如果出现很多文件的页面，则说明配置成功
+   ![命令行](/img/mvnhelp.png "命令行")
+
 # 安装 mcp
 
 # 连接数据库

@@ -1,0 +1,12 @@
+body {
+    cursor: url(https://gcore.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur),
+        default;
+}
+a,
+img {
+    cursor: url(https://gcore.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),
+        default;
+}
+#footer-wrap{
+    padding: 20px;
+}

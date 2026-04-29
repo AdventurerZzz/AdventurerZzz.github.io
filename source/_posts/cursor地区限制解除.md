@@ -1,6 +1,8 @@
 ---
 title: "cursor地区限制解除"
 date: 2025-12-17 11:32:32
+categories:
+  - AI
 tags:
   - AI
 ---

@@ -1,6 +1,8 @@
 ---
 title: 优化axios封装之配置使用AbortController取消重复请求
 date: 2024-09-24 17:21:14
+categories:
+  - 前端
 tags:
   - 前端
   - axios

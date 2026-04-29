@@ -1,6 +1,8 @@
 ---
 title: 关于前端Skill的AI提效
 date: 2026-04-29 11:17:21
+categories:
+  - AI
 tags:
   - AI
   - 前端

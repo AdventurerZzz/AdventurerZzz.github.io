@@ -1,6 +1,8 @@
 ---
 title: Hexo增加Live2D动态人物
 date: 2024-09-18 15:30:52
+categories:
+  - Hexo
 tags:
   - Live2D
 ---

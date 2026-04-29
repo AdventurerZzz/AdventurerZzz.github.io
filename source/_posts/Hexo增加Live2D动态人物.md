@@ -2,6 +2,7 @@
 title: Hexo增加Live2D动态人物
 date: 2024-09-18 15:30:52
 tags:
+  - Live2D
 ---
 
 # 一、安装 hexo-helper-live2d 插件

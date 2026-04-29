@@ -2,6 +2,8 @@
 title: "Java环境搭建与mcp连接数据库"
 date: 2025-12-26 16:38:08
 tags:
+  - Java
+  - mcp
 ---
 
 ## 本文用于记录 Java 环境搭建与 mcp 连接数据库的步骤

@@ -2,6 +2,10 @@
 title: 优化axios封装之配置使用AbortController取消重复请求
 date: 2024-09-24 17:21:14
 tags:
+  - 前端
+  - axios
+  - 重复请求
+  - AbortController
 ---
 
 本文主要记录如何使用 axios 的 CancelToken 机制解决数据请求过多导致的数据错乱问题，通过配置参数中断重复请求并管理缓存，确保请求的高效性和准确性。  

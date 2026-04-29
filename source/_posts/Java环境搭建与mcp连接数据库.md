@@ -19,7 +19,6 @@ tags:
 2. 右击【我的电脑】->【属性】->【高级系统设置】->【高级】->【环境变量】
    ![环境变量](/img/jdkpath.png "环境变量")
    新增环境变量：
-
    - 变量名：JAVA_HOME
      ![环境变量](/img/newJavahome.png "环境变量")
    - 变量值：D:\java\jdk-17 （根据自己的安装路径修改）
@@ -101,8 +100,92 @@ tags:
 
 # 安装 mcp
 
+直接在MCP的客户端中配置
+配置文件：`~/.mcp/servers.json`
+
+```json
+{
+  "mcpServers": {
+    "mysql": {
+      "command": "npx",
+      "args": ["-y", "@fhuang/mcp-mysql-server"],
+      "env": {
+        "MYSQL_HOST": "localhost",
+        "MYSQL_USER": "your_username",
+        "MYSQL_PASSWORD": "your_password",
+        "MYSQL_DATABASE": "your_database"
+      }
+    }
+  }
+}
+```
+
 # 连接数据库
 
-# 测试连接
+在Java项目中连接数据库
+
+```java
+// 导入JDBC相关类
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.util.Arrays;
+
+/**
+ * 向 t_user 表插入多条数据（Maven/普通Java项目通用）
+ */
+public class DBConnectionTest {
+    // 1. 配置数据库连接参数（替换为你的实际配置）
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/test_db?useSSL=false&serverTimezone=Asia/Shanghai";
+    private static final String DB_USER = "root";
+    private static final String DB_PASSWORD = "123456";
+
+    public static void main(String[] args) {
+        // 2. try-with-resources：自动关闭 Connection 和 PreparedStatement 资源
+        try (
+                // 获取数据库连接
+                Connection conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASSWORD);
+                // 预编译插入SQL（? 是占位符，对应 username 和 age 字段，id自增、create_time自动填充，无需手动传入）
+                PreparedStatement pstmt = conn.prepareStatement("INSERT INTO t_user (username, age) VALUES (?, ?)")
+        ) {
+            System.out.println("数据库连接成功！🎉");
+
+            // 方式1：单条插入（插入第一条数据）
+            pstmt.setString(1, "张三");  // 第一个占位符：username（String类型）
+            pstmt.setInt(2, 20);         // 第二个占位符：age（int类型）
+            int singleAffectedRows = pstmt.executeUpdate(); // 执行单条插入
+            System.out.println("单条数据插入成功，受影响行数：" + singleAffectedRows);
+
+            // 方式2：批量插入（插入多条数据，效率更高）
+            // 清空上一次的占位符参数
+            pstmt.clearParameters();
+            pstmt.setString(1, "李四");
+            pstmt.setInt(2, 22);
+            pstmt.addBatch(); // 添加到批量任务队列
+
+            pstmt.clearParameters();
+            pstmt.setString(1, "王五");
+            pstmt.setInt(2, 25);
+            pstmt.addBatch(); // 添加到批量任务队列
+
+            pstmt.clearParameters();
+            pstmt.setString(1, "赵六");
+            pstmt.setInt(2, 28);
+            pstmt.addBatch(); // 添加到批量任务队列
+
+            // 执行批量插入，返回每条数据的受影响行数
+            int[] batchAffectedRows = pstmt.executeBatch();
+            System.out.println("批量数据插入成功，每条数据受影响行数：" + Arrays.toString(batchAffectedRows));
+            System.out.println("累计插入数据条数：" + (1 + batchAffectedRows.length)); // 1条单条 + 批量条数
+
+        } catch (Exception e) {
+            // 捕获异常，打印报错信息
+            System.err.println("数据库操作失败！❌");
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 # 完成

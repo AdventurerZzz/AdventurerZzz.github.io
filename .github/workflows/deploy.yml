@@ -1,18 +1,22 @@
-name: 自动部署 Hexo（用户主页专用）
+name: 自动部署 Hexo 博客
+
 on:
   push:
     branches:
-      - main
+      - dev  # 只有提交到 dev 才触发构建
 
 jobs:
   build:
     runs-on: ubuntu-latest
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: dev  # 从 dev 拉源码
 
-      - name: 安装 Node
+      - name: 安装 Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -26,11 +30,11 @@ jobs:
       - name: 生成静态文件
         run: hexo generate
 
-      - name: 部署到 main 分支（用户主页必须这样）
+      - name: 部署到 main 分支
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          publish_branch: main
+          publish_branch: main  # 部署到网页分支
           user_name: "AdventurerZzz"
           user_email: "695409304@qq.com"

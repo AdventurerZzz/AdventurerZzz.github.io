@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - dev  # 只监听 dev 分支
+  workflow_dispatch:
 
 jobs:
   build:

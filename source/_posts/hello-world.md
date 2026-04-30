@@ -20,7 +20,7 @@ More info: [Writing](https://hexo.io/docs/writing.html)
 
 ```bash
 $ hexo server
-测试一下自动化部署构建
+测试一下自动化部署构建1
 ```
 
 <!-- <img src="https://ghchart.rshah.org/409ba5/AdventurerZzz" alt="Barry-Flynn's Blue Github Chart" /> -->

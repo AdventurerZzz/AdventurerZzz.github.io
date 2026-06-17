@@ -48,7 +48,7 @@ favicon: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAAA
 
 # Avatar (頭像)
 avatar:
-  img: /img/favicon.jpg
+  img: /img/favicon1.jpg
   effect: false
 
 # Disable all banner image

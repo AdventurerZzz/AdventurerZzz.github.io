@@ -6,6 +6,8 @@ if theme.preloader.enable
   case theme.preloader.load_style    
     when 'wizard'
       include ./load_style/wizard.pug
+    when 'gear'
+      include ./load_style/gear.pug
 else
   include ./pace.pug
 

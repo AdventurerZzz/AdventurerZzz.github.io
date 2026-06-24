@@ -246,7 +246,7 @@ aside:
     content: 欢迎访问我的博客！<br><img src="/img/gg-cat.gif" width="100%" height="200"/>
 
   card_recent_post:
-    enable: true
+    enable: false
     limit: 5 # if set 0 will show all
     sort: date # date or updated
     sort_order: # Don't modify the setting unless you know how it works
